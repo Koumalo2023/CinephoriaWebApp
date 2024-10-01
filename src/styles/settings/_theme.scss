@@ -1,0 +1,20 @@
+@import 'variables';
+
+// Thème clair
+.light-theme {
+    --primary-color: #{$first-color};
+    --secondary-color: #{$second-color};
+    --accent-color: #{$third-color};
+    --background-color: #{$white};
+    --text-color: #{$gray-dark};
+  }
+  
+  // Thème sombre
+  .dark-theme {
+    --primary-color: #{$gray-dark};
+    --secondary-color: #{$second-color};
+    --accent-color: #{$third-color};
+    --background-color: #000000;
+    --text-color: #{$first-color};
+  }
+  

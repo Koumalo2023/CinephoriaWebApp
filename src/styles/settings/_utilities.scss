@@ -1,0 +1,39 @@
+@import 'variables';
+
+// Espacement
+.m-0 {
+    margin: 0 !important;
+  }
+  
+  
+  
+  .p-0 {
+    padding: 0 !important;
+  }
+  
+  .mt-lg {
+    margin-top: $spacing-lg !important;
+  }
+  
+  .pb-md {
+    padding-bottom: $spacing-md !important;
+  }
+  
+  // Affichage
+  .d-flex {
+    display: flex !important;
+  }
+  
+  .text-center {
+    text-align: center !important;
+  }
+  
+  // Couleurs de texte
+  .text-primary {
+    color: $second-color !important;
+  }
+  
+  .text-accent {
+    color: $third-color !important;
+  }
+  

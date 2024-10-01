@@ -1,0 +1,16 @@
+@import 'variables';
+// Bouton principal
+.btn-primary {
+    @include button-style($second-color, $white);
+  }
+  
+  // Bouton secondaire
+  .btn-secondary {
+    @include button-style($third-color, $black);
+  }
+  
+  // Bouton de danger ou d'alerte
+  .btn-danger {
+    @include button-style(#dc3545, $white);
+  }
+  

@@ -1,0 +1,39 @@
+@import 'variables';
+
+// Titres
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-base;
+    color: $second-color;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  // Paragraphes
+  p {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    line-height: 1.6;
+    color: $gray-dark;
+  }
+  
+  // Liens
+  a {
+    color: $third-color;
+    text-decoration: none;
+    
+    &:hover {
+      color: darken($third-color, 15%);
+      text-decoration: underline;
+    }
+  }
+  
