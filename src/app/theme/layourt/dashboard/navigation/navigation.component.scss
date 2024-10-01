@@ -1,0 +1,40 @@
+// #sidebar {
+//   max-width: 250px;
+//   min-width: 250px;
+//   height: 100vh;
+//   background: #343a40;
+//   transition: all 0.3s ease-in-out;
+
+//   .sidebar-logo {
+//     padding: 1.15rem;
+    
+//     a {
+//       color: #ffffff;
+//       font-size: 1.15rem;
+//       font-weight: 600;
+//     }
+//   }
+
+//   &.hidden {
+//     margin-left: -250px;
+//   }
+
+//   @media (max-width: 767.98px) {
+//     margin-left: -250px;
+
+//     &.hidden {
+//       margin-left: 0;
+//     }
+//   }
+// }
+
+//   @media (max-width: 767.98px) {
+//     #sidebar {
+//       margin-left: -250px;
+  
+//       &.collapsed {
+//         margin-left: 0;
+//       }
+//     }
+//   }
+  
