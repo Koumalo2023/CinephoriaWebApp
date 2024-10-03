@@ -1,0 +1,131 @@
+.wrapper {
+  @include flex(row);
+  align-items: stretch;
+  width: 100%;
+  background: $first-color;
+  overflow-y: scroll;
+  opacity: 1;
+}
+
+.main {
+  @include flex(column);
+  min-height: 100vh;
+  width: 100%;
+  @include transition(all, 0.35s);
+  background: $first-color;
+
+  .content {
+    flex: 1;
+    max-width: 100vw;
+    padding: $spacing-unit;
+    box-shadow: $box-shadow-base;
+    border-radius: 10px;
+    background: $white-color;
+
+    @media (min-width: 768px) {
+      max-width: auto;
+      width: auto;
+    }
+  }
+
+  // Application des styles dans les classes spécifiques
+  .checkbox-custom {
+    @include checkbox-styles();
+  }
+
+  .radio-custom {
+    @include radio-styles();
+  }
+
+  .textarea-custom {
+    @include textarea-styles();
+  }
+
+
+  .select-custom {
+    @include select-styles();
+  }
+
+  .custom-select {
+    @include select-styles();
+  }
+
+  // Exemple d'utilisation pour une petite carte
+  .small-card {
+    @include card-styles($small-card-bg);
+  }
+
+  .input-text {
+    @include input-text-styles(); // Applique les styles des champs de texte
+    @include floating-label; // Applique les styles des labels flottants
+  }
+
+  // Exemple d'utilisation pour une grande carte
+  .large-card {
+    @include card-styles($large-card-bg, 2rem);
+  }
+
+  // Exemple d'utilisation
+  .card-affiche-classique {
+    @include card-affiche-classique();
+  }
+
+
+  // Exemple d'utilisation
+  .card-affiche-moderne {
+    @include card-affiche-moderne();
+  }
+
+  .btn-primary {
+    @include button-styles($third-color, $white-color, darken($dark-color, 0%));
+    }
+    
+    // Bouton secondaire
+    .btn-secondary {
+      @include button-styles($button-green-type2, $white-color, darken($button-green-type2, 10%));
+    }
+
+  .btn-custom-primary {
+    @include button-styles($button-green-type1, $white-color, darken($button-green-type1, 10%));
+  }
+  .btn-outline {
+  @include button-outline(#005b56, #005b56, #00ac45, #fff);
+}
+.btn-elevated {
+  @include button-elevated(#005b56, #fff, #00ac45);
+}
+
+  .btn-custom-secondary {
+    @include button-styles($button-green-type2, $white-color, darken($button-green-type2, 10%));
+  }
+
+  .btn-ghost {
+    @include button-ghost(#005b56, #005b56, #00ac45, #fff, #00ac45);
+  }
+  
+
+  .card {
+    @include box-shadow(3);
+    margin-bottom: $spacing-unit * 1.5;
+
+    &.illustration {
+      background-color: $second-color;
+      color: $white-color;
+
+      .illustration-img {
+        max-width: 150px;
+        width: 100%;
+      }
+    }
+
+    &.illustration-2 {
+      background-color: $third-color;
+      color: $white-color;
+    }
+  }
+
+  .footer {
+    background-color: $first-color;
+    color: $black;
+  }
+}

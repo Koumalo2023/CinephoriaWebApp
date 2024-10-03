@@ -1,105 +1,215 @@
 <div class="wrapper">
     <app-navigation [isSidebarHidden]="isSidebarHidden"></app-navigation>
-  <div class="main">
-    <app-nav-bar (toggleSidebar)="onToggleSidebar()"></app-nav-bar>
-      <main class="content px-3 py-2">
-          <div class="container-fluid">
-              <div class="mb-3">
-                  <h4>Dashboard-Admin</h4>
-              </div>
-              <div class="row">
-                  <div class="col-12 col-md-6 d-flex">
-                      <div class="card flex-fill border-0 illustration">
-                          <div class="card-body p-0 d-flex flex-fill">
-                              <div class="row g-0 w-100">
-                                  <div class="col-6">
-                                      <div class="p-3 m-1">
-                                          <h4>Welcome Back, Admin</h4>
-                                          <p class="mb-0">Dashboard-Admin, CodzSword</p>
-                                      </div>
-                                  </div>
-                                  <div class="col-6 align-self-end text-end">
-                                      <img src="images/customer-support.jpg" class="img-fluid illustration-img" alt="">
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col-12 col-md-6 d-flex">
-                      <div class="card flex-fill border-0 illustration-2">
-                          <div class="card-body py-4">
-                              <div class="d-flex align-items-start">
-                                  <div class="flex-grow-1">
-                                      <h4 class="mb-2">$ 78.00</h4>
-                                      <p class="mb-2">Total Earnings</p>
-                                      <div class="mb-0">
-                                          <span class="badge text-success me-2">+9.0%</span>
-                                          <span class="text-muted">Since Last Month</span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-              <!-- Table Element -->
-              <div class="card border-0">
-                  <div class="card-header">
-                      <h5 class="card-title">Basic Table</h5>
-                      <h6 class="card-subtitle text-muted">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ducimus,
-                          necessitatibus reprehenderit itaque!
-                      </h6>
-                  </div>
-                  <div class="card-body">
-                      <table class="table">
-                          <thead>
-                              <tr>
-                                  <th scope="col">#</th>
-                                  <th scope="col">First</th>
-                                  <th scope="col">Last</th>
-                                  <th scope="col">Handle</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                                  <th scope="row">1</th>
-                                  <td>Mark</td>
-                                  <td>Otto</td>
-                              </tr>
-                              <tr>
-                                  <th scope="row">2</th>
-                                  <td>Jacob</td>
-                                  <td>Thornton</td>
-                              </tr>
-                              <tr>
-                                  <th scope="row">3</th>
-                                  <td colspan="2">Larry the Bird</td>
-                              </tr>
-                          </tbody>
-                      </table>
-                  </div>
-              </div>
-          </div>
-      </main>
-      <footer class="footer">
-          <div class="container-fluid">
-              <div class="row text-muted">
-                  <div class="col-6 text-start">
-                      <p class="mb-0">
-                          <a href="#" class="text-muted"><strong>Dashboard-Admin</strong></a>
-                      </p>
-                  </div>
-                  <div class="col-6 text-end">
-                      <ul class="list-inline">
-                          <li class="list-inline-item"><a href="#" class="text-muted">Contact</a></li>
-                          <li class="list-inline-item"><a href="#" class="text-muted">About Us</a></li>
-                          <li class="list-inline-item"><a href="#" class="text-muted">Terms</a></li>
-                          <li class="list-inline-item"><a href="#" class="text-muted">Booking</a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </footer>
-  </div>
+    <div class="main">
+        <app-nav-bar (toggleSidebar)="onToggleSidebar()"></app-nav-bar>
+        <main class="content px-3 py-2">
+            <div class="container-fluid">
+                <div class="mb-3">
+                    <h4>Dashboard-Admin</h4>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 d-flex">
+                        <div class="card flex-fill border-0 illustration">
+                            <div class="card-body p-0 d-flex flex-fill">
+                                <div class="row g-0 w-100">
+                                    <div class="col-6">
+                                        <div class="p-3 m-1">
+                                            <h4>Welcome Back, Admin</h4>
+                                            <p class="mb-0">Dashboard-Admin, CodzSword</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 align-self-end text-end">
+                                        <img src="images/customer-support.jpg" class="img-fluid illustration-img"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 d-flex">
+                        <div class="card flex-fill border-0 illustration-2">
+                            <div class="card-body py-4">
+                                <div class="d-flex align-items-start">
+                                    <div class="flex-grow-1">
+                                        <h4 class="mb-2">$ 78.00</h4>
+                                        <p class="mb-2">Total Earnings</p>
+                                        <div class="mb-0">
+                                            <span class="badge text-success me-2">+9.0%</span>
+                                            <span class="text-muted">Since Last Month</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Table Element -->
+                <!-- // Exemple d'utilisation dans le HTML : -->
+                <select class="form-select custom-select" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+                <div class="card-affiche-moderne">
+                    <div class="card-header">
+                        <h2>Crad Moderne pour test</h2>
+                    </div>
+                    <p>Crad Moderne pour test</p>
+                </div>
+                <div class="mb-3">
+                    <label for="customSelect" class="form-label">Custom Select</label>
+                    <select class="form-select select-custom" id="customSelect" aria-label="Default select example">
+                        <option selected>Select an option</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-custom-primary">Primary</button>
+                <div class="large-card">
+                    <div class="card-header">
+                        <h2>Large Card pour Test</h2>
+                    </div>
+                    
+                    Large Card pour Test
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button type="button" class="btn btn-primary">Danger</button>
+                    <button type="button" class="btn btn-secondary">Warning</button>
+                </div>
+                <button type="button" class="btn btn-custom-secondary">Secondary</button>
+                <div class="card-affiche-classique">
+                    <div class="card-header">
+                        <h2>Card-affiche-classique pour Test</h2>
+                    </div>
+                    
+                    <button type="button" class="btn btn-success">Success</button>
+                    <button class="btn btn-elevated">Elevated Button</button>
+                    <button class="btn btn-outline">Outline Button</button>
+
+                    <button type="button" class="btn btn-ghost">btn Ghost</button>
+
+                </div>
+                <div class="row">
+                    <div class="small-card col-md-3">small-card  pour test
+                        <!-- Checkboxes -->
+                        <div class="form-check">
+                            <input class="form-check-input checkbox-custom" type="checkbox" value=""
+                                id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Default checkbox
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input checkbox-custom" type="checkbox" value=""
+                                id="flexCheckChecked" checked>
+                            <label class="form-check-label" for="flexCheckChecked">
+                                Checked checkbox
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="small-card col-md-3">
+                        
+                        <div class="card-header">
+                            <h2>small-card pour Test Header</h2>
+                        </div>
+                        <!-- Radios -->
+                        <div class="form-check">
+                            <input class="form-check-input radio-custom" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                Default radio
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input radio-custom" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault2" checked>
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                Default checked radio
+                            </label>
+                        </div>
+
+                        <!-- Textarea -->
+                        <div class="mb-3">
+                            <label for="exampleTextarea" class="form-label">Example textarea</label>
+                            <textarea class="form-control textarea-custom" id="exampleTextarea" rows="3"
+                                placeholder="Write something here..."></textarea>
+                        </div>
+                    </div>
+                    <div class="small-card col-md-3">Crad Moderne pour test
+
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control input-text" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+
+                        <div class="form-floating">
+                            <input type="password" class="form-control input-text" id="floatingPassword"
+                                placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+
+                        <div>
+                            <textarea class="form-control textarea-custom" id="exampleTextarea" rows="3"
+                                placeholder="Enter your message"></textarea>
+                        </div>
+
+                    </div>
+                    <div class="small-card col-md-3">
+
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio et, provident officiis fugiat
+                            doloribus maiores iure sequi nam ratione optio perferendis? Possimus eos ut sit enim nisi
+                            debitis aliquam omnis.
+                        </p>
+                        <a href="#">debitis aliquam omnis.</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-card col-md-3">Crad Moderne pour test</div>
+                    <div class="small-card col-md-3">Crad Moderne pour test</div>
+                    <div class="small-card col-md-3">Crad Moderne pour test
+                        <div class="form-floating mb-3 ">
+                            <input type="email" class="form-control input-text" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+
+                        <div class="form-floating ">
+                            <input type="password" class="form-control input-text" id="floatingPassword"
+                                placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                    </div>
+                    <div class="small-card col-md-3">Crad Moderne pour test
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio et, provident officiis fugiat
+                            doloribus maiores iure sequi nam ratione optio perferendis? Possimus eos ut sit enim nisi
+                            debitis aliquam omnis.</p>
+                        <button type="button" class="btn btn-custom-secondary">Secondary</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row text-muted">
+                    <div class="col-6 text-start">
+                        <p class="mb-0">
+                            <a href="#" class="text-muted"><strong>Dashboard-Admin</strong></a>
+                        </p>
+                    </div>
+                    <div class="col-6 text-end">
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#" class="text-muted">Contact</a></li>
+                            <li class="list-inline-item"><a href="#" class="text-muted">About Us</a></li>
+                            <li class="list-inline-item"><a href="#" class="text-muted">Terms</a></li>
+                            <li class="list-inline-item"><a href="#" class="text-muted">Booking</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </div>
