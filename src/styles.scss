@@ -5,10 +5,10 @@
 
 @import 'styles/settings/theme';
 @import 'styles/settings/mixins';
-@import 'styles/settings/buttons';
+@import 'styles/components/components';
 @import 'styles/settings/utilities';
 @import 'styles/settings/typography';
 @import 'styles/settings/globalRest';
 @import 'styles/settings/variables.scss';
 
-@import 'styles/theme/layourt/layourt.scss';
+@import 'styles/theme/layourt/dashboard/layourt.scss';

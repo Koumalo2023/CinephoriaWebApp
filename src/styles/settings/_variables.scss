@@ -1,14 +1,24 @@
+// Fichier _variables.scss
+
 // Couleurs de la palette pour Cinephoria
 $first-color: #f1f2f7; // 60% (Couleur principale utilisée pour le fond général)
 $second-color: #096c47;
-$third-color: #eac100;
+$third-color: #fdcf00;
 
-// Autres couleurs
+// Autres couleurs de base
 $white-color: #ffffff;
 $black: #000000;
 $gray-light: #ebe4e4;
 $gray-dark: #333333;
 $dark-color: #343a40;
+
+// Nouvelles couleurs ajoutées
+$small-card-bg: #f2f7f7; // Couleur pour le fond des petites cartes
+$large-card-bg: #e5eeee; // Couleur pour le fond des grandes cartes
+$button-green-type1: #005b56; // Couleur pour le fond des boutons verts (type 1)
+$button-green-type2: #00ac45; // Couleur pour le fond des boutons verts (type 2)
+$test-green: #3f8882; // Couleur utilisée pour les tests spécifiques
+$h3-text-color: #00312d; // Couleur pour le texte des titres H3
 
 // Espacements
 $spacing-xs: 0.5rem;
@@ -26,3 +36,4 @@ $font-size-small: 14px;
 // Ombres et bordures
 $border-radius: 4px;
 $box-shadow-base: 0 4px 6px rgba(0, 0, 0, 0.1);
+

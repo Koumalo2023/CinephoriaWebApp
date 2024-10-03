@@ -2,74 +2,119 @@
 
 // Mixin pour les ombres portées
 @mixin box-shadow($color, $intensity: 0.1) {
-    box-shadow: 0 4px 6px rgba($color, $intensity);
-  }
-  
-  // Mixin pour les boutons avec une transition
-  @mixin button-style($background, $text-color) {
-    background-color: $background;
-    color: $text-color;
-    padding: $spacing-sm $spacing-md;
-    border-radius: $border-radius;
-    transition: background-color 0.3s ease;
-  
-    &:hover {
-      background-color: darken($background, 10%);
-    }
-  }
+  box-shadow: 0 4px 6px rgba($color, $intensity);
+}
 
-  @mixin typography($font-size: $font-size-base, $font-weight: normal, $line-height: 1.5) {
-    font-size: $font-size;
-    font-weight: $font-weight;
-    line-height: $line-height;
-  }
-  
-  // Mixin pour les flex-box
-  @mixin flex-center($direction: row) {
-    display: flex;
-    flex-direction: $direction;
-    align-items: center;
-    justify-content: center;
-  }
+// Titres
 
-  @mixin flex($direction: row, $justify: flex-start, $align: stretch) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
-  }
-
-  //Mixin pour Centrage Absolu
-  @mixin absolute-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  //Cas d'utilisation
-    //   .modal {
-    //     @include absolute-center;
-    //   }
-  
-  
+@mixin heading-styles($font-size, $font-weight: 600, $line-height: 1.2, $color: $dark-color) {
+  font-family: $font-family-base;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  color: $color;
+  margin-bottom: 1rem;
+}
 
 
-  //Texte Truncation (Couper le Texte avec Ellipsis)
-  @mixin text-truncate {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+@mixin paragraph-styles($font-size: 1rem, $line-height: 1.6, $color: $dark-color) {
+  font-family: $font-family-base;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+  margin-bottom: 1.5rem;
+}
+
+@mixin list-styles($list-type: disc, $padding-left: 1.5rem, $color: $dark-color) {
+  list-style-type: $list-type;
+  padding-left: $padding-left;
+  color: $color;
+
+  li {
+    margin-bottom: 0.5rem; // Espace entre les éléments de la liste
   }
+}
+
+@mixin link-styles($color: $second-color, $hover-color: darken($test-green, 10%), $active-color: darken($second-color, 15%)) {
+  color: $color !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:link,
+  &:visited {
+    text-decoration: none;
+  }
+
+  &:hover {
+    color: $hover-color;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: $active-color;
+    text-decoration: none;
+  }
+}
+
+
+
+@mixin typography($font-size: $font-size-base, $font-weight: normal, $line-height: 1.5) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// Mixin pour les flex-box
+@mixin flex-center($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+
+//Mixin pour Centrage Absolu
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//Cas d'utilisation
+//   .modal {
+//     @include absolute-center;
+//   }
+
+
+
+
+//Texte Truncation (Couper le Texte avec Ellipsis)
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 //   .title {
 //     @include text-truncate;
 //     max-width: 200px;
 //   }
-  
 
-  //Mixin de Gradient
-  @mixin gradient-bg($start-color, $end-color) {
-    background: linear-gradient(to right, $start-color, $end-color);
-  }
+
+//Mixin de Gradient
+@mixin gradient-bg($start-color, $end-color) {
+  background: linear-gradient(to right, $start-color, $end-color);
+}
+
 //   .header {
 //     @include gradient-bg($second-color, $third-color);
 //   }
@@ -77,21 +122,32 @@
 
 //Mixin pour les Médias Queries
 @mixin respond-to($breakpoint) {
-    @if $breakpoint == small {
-      @media (max-width: 600px) { @content; }
-    } @else if $breakpoint == medium {
-      @media (max-width: 900px) { @content; }
-    } @else if $breakpoint == large {
-      @media (max-width: 1200px) { @content; }
+  @if $breakpoint ==small {
+    @media (max-width: 600px) {
+      @content;
     }
   }
+
+  @else if $breakpoint ==medium {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==large {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+}
+
 //   .card {
 //     width: 100%;
-  
+
 //     @include respond-to(medium) {
 //       width: 50%;
 //     }
-  
+
 //     @include respond-to(small) {
 //       width: 100%;
 //     }
@@ -100,49 +156,41 @@
 
 //Mixin pour Bordures Responsives
 @mixin responsive-border($width: 1px, $style: solid, $color: $gray-dark) {
-    border: $width $style $color;
-  
-    @include respond-to(small) {
-      border-width: $width * 0.5;
-    }
+  border: $width $style $color;
+
+  @include respond-to(small) {
+    border-width: $width * 0.5;
   }
+}
+
 //   .box {
 //     @include responsive-border(2px);
 //   }
-  
 
-  
+
+
 
 
 //Mixin pour Ajout d'Ombres à Plusieurs Niveaux
 @mixin box-shadow($level: 1) {
-    @if $level == 1 {
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
-    } @else if $level == 2 {
-      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
-    } @else if $level == 3 {
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
-    }
+  @if $level ==1 {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
   }
 
-  // .card {
-  //   @include box-shadow(2);
-  // }
-
- // Mixin pour Transition Facile
- @mixin transition($properties: all, $duration: 0.3s, $timing-function: ease-in-out) {
-    transition: $properties $duration $timing-function;
+  @else if $level ==2 {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
   }
-  .button {
-    @include transition(background-color, 0.5s);
-  
-    &:hover {
-      background-color: darken($second-color, 10%);
-    }
-  }  
-  
-  
-  
-  
-  
-  
+
+  @else if $level ==3 {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.19), 0px 6px 6px rgba(0, 0, 0, 0.23);
+  }
+}
+
+// .card {
+//   @include box-shadow(2);
+// }
+
+// Mixin pour Transition Facile
+@mixin transition($properties: all, $duration: 0.3s, $timing-function: ease-in-out) {
+  transition: $properties $duration $timing-function;
+}
