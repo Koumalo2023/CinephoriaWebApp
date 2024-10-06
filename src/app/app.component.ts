@@ -1,7 +1,5 @@
-import { Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ThemeService } from './theme/shared/services/ThemeService';
-import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
