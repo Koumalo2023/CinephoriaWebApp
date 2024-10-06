@@ -1,7 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { ThemeService } from '../../../shared/services/ThemeService';
 import { NAVIGATION_ITEMS, NavigationItem } from './navigation';
 
 @Component({
