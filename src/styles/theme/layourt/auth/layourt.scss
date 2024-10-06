@@ -1,0 +1,54 @@
+@import'../../../settings/mixins';
+.auth-container {
+    min-height: 100vh;
+    background-color: $first-color;
+    @include flex-center;
+    padding: $spacing-lg;
+  
+    .auth-content {
+      background-color: $white-color;
+      padding: $spacing-md;
+      border-radius: $border-radius;
+      @include box-shadow(1);
+      max-width: 400px;
+      width: 100%;
+      text-align: center;
+  
+      h2 {
+        @include heading-styles(2rem, 600, 1.3, $second-color);
+      }
+  
+      form {
+        @include flex(column);
+        gap: $spacing-sm;
+  
+        input {
+          padding: $spacing-xs;
+          border: 1px solid $gray-dark;
+          border-radius: $border-radius;
+          font-size: $font-size-base;
+        }
+  
+        button {
+          background-color: $button-green-type1;
+          color: $white-color;
+          padding: $spacing-sm;
+          border: none;
+          border-radius: $border-radius;
+          cursor: pointer;
+          @include transition(background-color, 0.3s, ease);
+  
+          &:hover {
+            background-color: lighten($button-green-type1, 10%);
+          }
+        }
+      }
+  
+      a {
+        @include link-styles($second-color, darken($second-color, 10%));
+        display: block;
+        margin-top: $spacing-xs;
+      }
+    }
+  }
+  
